@@ -25,6 +25,17 @@ public class FoodDeliveryOrderBuilder {
         return this;
     }
     public FoodDeliveryOrder build() {
+        if (restaurant == null || restaurant.isBlank()) {
+            throw new IllegalArgumentException("Which Restaurant?");
+        }
+        if (mainDish == null || mainDish.isBlank()) {
+            throw new IllegalArgumentException("Main dish?");
+        }
+        if (delivery && (deliveryAddress == null || deliveryAddress.isBlank())) {
+            throw new IllegalArgumentException(
+                    "Delivery address is required when delivery is enabled"
+            );
+        }
         return new FoodDeliveryOrder(
                 restaurant,
                 mainDish,

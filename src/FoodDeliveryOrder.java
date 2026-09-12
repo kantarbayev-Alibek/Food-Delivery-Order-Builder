@@ -4,8 +4,7 @@ public class FoodDeliveryOrder {
     private String drink;
     private String deliveryAddress;
     private boolean delivery;
-    public FoodDeliveryOrder(String restaurant, String mainDish, String drink,
-                             String deliveryAddress, boolean delivery) {
+    public FoodDeliveryOrder(String restaurant,String mainDish,String drink,String deliveryAddress, boolean delivery) {
         this.restaurant = restaurant;
         this.mainDish = mainDish;
         this.drink = drink;
